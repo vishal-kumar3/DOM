@@ -2,7 +2,6 @@ var elem = document.querySelectorAll(".elem");
 // var img = document.querySelector("img");
 
 elem.forEach(function(element) {
-    img = element.childNodes[3];
 
     element.childNodes[1].addEventListener("mousemove", function(dest){
         // img.style.transform = "scale(1)";

@@ -31,7 +31,7 @@ html, body, .main {
     font-size: 5vw;
     position: relative;
     z-index: 2;
-    mix-blend-mode: difference;
+    /* mix-blend-mode: difference; */
 }
 
 .elem img{
@@ -43,5 +43,5 @@ html, body, .main {
     position: absolute;
     /* transform: translate(-50%, -50%); */
     opacity: 0;
-    transition: all linear 0.15s;
+    transition: all linear 0.2s;
 }
