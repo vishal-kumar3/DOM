@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gilroy';
+}
+
+html, body {
+    height: 100%;
+    width: 100%
+}
+
+body{
+    background-color: #659FBC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: #fff;
+    height: 450px;
+    width: 300px;
+    border-radius: 12px;
+    padding: 15px 15px;
+    overflow: hidden;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.profile img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.profile i{
+    font-size: 25px;
+}
+
+.middle{
+    height: 60%;
+    width: 100%;
+    position: relative;
+}
+.post{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: 0px -50px; */
+    /* position: relative; */
+}
+
+.popUp{
+    color: #fff;
+    font-size: 70px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.5s;
+}
+
+/* .popUp{
+    color: rebeccapurple;
+    opacity: 0;
+} */
+
+.stats{
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.fill-love{
+    color: red;
+    display: none;
+}
+
+.love, .fill-love{
+    cursor: pointer;
+}
+
+.discription{
+    font-size: 18px;
+    font-weight: 500;
+}
