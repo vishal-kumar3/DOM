@@ -17,20 +17,26 @@
         </div>
 
         <div class="song-card">
-            <img src="../Spotify/img/1.jpg" alt="1">
-            <h1>On My Way</h1>
-            <h4>Alan Walker</h4>
+            <img id="poster" src="../Spotify/img/1.jpg" alt="1">
+            <h1 id="title">On My Way</h1>
+            <h4 id="artist">Alan Walker</h4>
         </div>
 
         <audio id="song" src="../Spotify/audio/1.mp3"></audio>
 
         <div class="control">
-            <input type="range" value="0" id="progress">
+            <div class="slide-bar">
+                <input type="range" value="0" id="progress">
+                <div>
+                    <p id="timeCurrent">00:00</p>
+                    <p id="timeEnd">00:00</p>
+                </div>
+            </div>
 
             <div class="controller top">
-                <i class="ri-skip-back-fill"></i>
+                <i onclick="back()" class="ri-skip-back-fill"></i>
                 <i onclick="playPause()" id="controller" class="ri-play-fill"></i>
-                <i class="ri-skip-forward-fill"></i>
+                <i onclick="next()" class="ri-skip-forward-fill"></i>
             </div>
         </div>
     </div>
