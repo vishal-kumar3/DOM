@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Gilroy';
+}
+
+html, body {
+    height: 100%;
+    width: 100%
+}
+
+body{
+    position: relative;
+}
+
+.min{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: blue;
+    left: 150px;
+}
+
+.pref{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: greenyellow;
+    left: 50%;
+}
+
+.max{
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    left: 500px;
+}
+
+.box{
+    width: clamp(150px, 50%, 500px);
+    height: 150px;
+    background-color: crimson;
+}
