@@ -1,0 +1,386 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html, body {
+    height: 100%;
+    width: 100%
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(0,0,0,.8);
+}
+
+header{
+    width: 90%;
+    height: 90%;
+    /* background-color: red; */
+    /* border: 1px solid red; */
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: -10px 8px 20px black;
+}
+
+header::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../Movie/img/money\ heist1.jpg) no-repeat center/cover;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+header::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    z-index: -1;
+}
+
+header video{
+    position: absolute;
+    width: 120%;
+    height: 190%;
+    top: -47%;
+    left: 0px;
+    z-index: -1;
+}
+
+header nav{
+    /* border: 1px solid red; */
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    /* border: 1px solid white; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+
+header nav .left .logo{
+    margin-right: 15px;
+}
+
+header nav .left{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header nav .left ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    gap: 15px;
+    list-style-type: none;
+}
+
+header .left ul a{
+    text-decoration: none;
+    color: white;
+}
+
+header .right{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 380px;
+}
+
+header .right input{
+    width: 300px;
+    height: 35px;
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    padding: 0px 20px;
+    font-size: 20px;
+    color: white;
+    background-color: rgba(255,255,255,.15);
+    /* background-color: transparent; */
+    backdrop-filter: blur(5px);
+}
+
+header .right input::placeholder{
+    color: white;
+}
+
+header .right .user{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+header .right .search{
+    /* display: none; */
+    color: white;
+    width: 300px;
+    height: 200px;
+    background-color: rgb(255, 255, 255, 0.1);
+    position: absolute;
+    top: 70px;
+    overflow-y: scroll;
+    visibility: hidden;
+}
+
+header .right .search::-webkit-scrollbar{
+    width: 5px;
+    background-color: rgb(255, 255, 255, 0.2);
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+header .right .search:hover::-webkit-scrollbar{
+    visibility: visible;
+}
+
+header .right .search::-webkit-scrollbar-thumb{
+    width: 5px;
+    background-color: rgb(255,255,255,0.3);
+    visibility: hidden;
+}
+
+header .right .search:hover::-webkit-scrollbar-thumb{
+    visibility: visible;
+}
+
+header .right .search .search-result{
+    width: 100%;
+    height: 60px;
+    background-color: rgb(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    padding: 0px 5px;
+    transition: .2s linear;
+    margin: 5px 0px;
+}
+
+header .right .search .search-result:hover{
+    background-color: rgb(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+header .right .search-result img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    object-position: center;
+    margin-right: 5px;
+}
+
+header .right .search-result div{
+    width: calc(100% - 55px);
+}
+
+header .right .search-result .title{
+    font-size: 17px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+header .right .search-result .disc,
+header .right .search-result i{
+    font-size: 12px;
+}
+
+header .right .search-result span{
+    background: yellow;
+    color: #000;
+}
+
+.middle{
+    position: relative;
+    width: clamp(300px , 40%, 600px);
+    height: 290px;
+    /* border: 1px solid red; */
+    padding: 0px 50px;
+    color: white;
+    margin-top: 120px;
+}
+
+.middle .title{
+    font-size: 5.5vw;
+    margin-bottom: 10px;
+    word-spacing: -2vw;
+}
+
+.middle .disc1{
+    width: 100%;
+    /* height: max(2.9vw, 3.4vh); */
+    font-size: max(1.2vw, 1.5vh);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: none;
+    margin-bottom: 10px;
+    word-break: break-all;
+}
+
+.middle .disc2{
+    font-weight: 900;
+    margin-bottom: 10px;
+}
+
+.middle .stream button{
+    cursor: pointer;
+    font-size: 1.8vw;
+    font-weight: 900;
+    background: linear-gradient(0deg, cyan, rgb(0, 213, 255));
+    color: white;
+    border: none;
+    margin-left: 15px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    animation: buttonAnimate 1s linear 0s infinite;
+}
+
+@keyframes buttonAnimate {
+    0%, 98% {
+        background: linear-gradient(5deg, cyan, rgb(0, 213, 255));
+    }
+    20% {
+        background: linear-gradient(58deg, cyan, rgb(0, 213, 255));
+    }
+    40% {
+        background: linear-gradient(110deg, cyan, rgb(0, 213, 255));
+    }
+    60% {
+        background: linear-gradient(168deg, cyan, rgb(0, 213, 255));
+    }
+    80% {
+        background: linear-gradient(251deg, cyan, rgb(0, 213, 255));
+    }
+}
+
+.bottom{
+    padding: 10px 50px;
+    /* border: 1px solid lightblue; */
+}
+
+.popular{
+    /* border: 1px solid white; */
+    height: calc(90% - 480px);
+    position: relative;
+}
+
+.popular h2{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.popular .popular-movies{
+    /* border: 1px solid salmon; */
+    position: relative;
+    display: flex;
+    gap: 15px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.popular .popular-movies::-webkit-scrollbar{
+    display: none;
+}
+
+.popular .popular-movies .movie-card{
+    min-width: 150px;
+    height: 200px;
+    margin: 10px 0px;
+    position: relative;
+    transition: .3s linear;
+}
+
+.popular .popular-movies .movie-card img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    object-position: center;
+    transition: .3s linear;
+    position: relative;
+}
+
+.popular .movie-card .hvr{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 9999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.popular .movie-card .hvr .cont{
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    padding: 0px 20px;
+    left: 0px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.popular .movie-card .hvr .cont h3{
+    font-size: 15px;
+}
+
+.popular .movie-card .hvr .cont .sub{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+}
+
+.popular .slider{
+    position: absolute;
+    width: 100%;
+    /* border: 1px solid red; */
+    top: 47%;
+    font-size: 40px;
+    color: white;
+    color: rgb(255,255,255,.4);
+}
+
+.popular .slider i:nth-child(1){
+    position: relative;
+    left: -1.7%;
+    z-index: 9991009999;
+}
+
+.popular .slider i:nth-child(2){
+    position: relative;
+    left: 93.7%;
+    z-index: 9991009999;
+}
+
+.popular .slider i:hover{
+    cursor: pointer;
+    color: rgb(255,255,255,.8);
+}
+
+.popular .movie-card:hover{
+    min-width: 340px;
+    transition: .3s linear;
+}
+
+.popular .movie-card:hover .hvr{
+    opacity: 1;
+    transition: .3s linear;
+}
