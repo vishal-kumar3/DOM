@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 90%;
+    height: 90%; */
+    background-color: rgba(0 ,0 ,0 ,.8);
+}
+
+.container{
+    width: 90%;
+    height: 90%;
+    box-shadow: 0px 10px 25px -8px #fff;
+    overflow: hidden;
+}
+
+#myVideo {
+    /* width: 99vw; */
+    /* height: 90vh; */
+    position: fixed;
+    width: 90%;
+    height: 90%;
+    transform: translate(0%, 0%);
+    border-radius: 20px;
+    /* min-width: 100%; */
+    /* min-height: 100%; */
+    /* aspect-ratio: 16/9; */
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+}
+
+.main{
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    padding: 0px 60px;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 80px;
+    /* background-color: salmon; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-bar .left,
+.nav-bar .right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-bar .left button{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.nav-bar .right input{
+    width: 300px;
+    height: 34px;
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(2px);
+    border: none;
+    border-radius: 20px;
+    color: white;
+    padding: 10px;
+}
+
+.nav-bar .right img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.middle{
+    margin: 50px 0px;
+    /* background-color: lightseagreen; */
+    color: white;
+    width: 500px;
+}
+
+.middle .movie-title{
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.middle .movie-disc{
+    margin-bottom: 15px;
+    height: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.middle .movie-type{
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.middle .movie-type span,
+.bottom .movie-card .hvr span{
+    color: black;
+    background-color: yellow;
+    font-size: 12px;
+    padding: 1px;
+}
+
+.middle .movie-watch button{
+    margin-left: 15px;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    background-image: linear-gradient(to right, rgb(113, 220, 255), rgb(62, 235, 245));
+    border: none;
+    border-radius: 5px;
+}
+
+.bottom .popular h2{
+    margin-bottom: 20px;
+    color: white;
+}
+
+.bottom .popular-movie{
+    display: flex;
+    gap: 15px;
+}
+
+.bottom .movie-card{
+    /* width: 150px; */
+    height: 200px; 
+    margin-bottom: 15px;
+}
+
+.bottom .movie-card img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    position: relative;
+    z-index: 5;
+    transition: 0.3s linear;
+}
+
+.bottom .movie-card .hvr{
+    display: none;  
+}
+
+.bottom .movie-card .hvr p{
+    color: white;
+    position: relative;
+    top: -50px;
+    left: 15px;
+    z-index: 10;
+}
+
+.bottom .movie-card .hvr .title{
+    font-weight: 600;
+}
+
+.bottom .movie-card .hvr p:nth-child(3){
+    top: -70px;
+    left: 220px;
+}
+
+.bottom .movie-card:hover img, 
+.bottom .movie-card:hover .hvr{
+    width: 300px;
+    height: 200px;
+    display: initial;
+    transition: .3s linear;
+}
+
+.bottom .popular{
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.bottom .popular::-webkit-scrollbar{
+    display: none;
+}

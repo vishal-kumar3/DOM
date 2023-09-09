@@ -11,62 +11,31 @@
 <body>
 
     <header>
-        <video muted src="../Movie/video/john_wick.webm"></video>
+        <video id="myVideo" autoplay repeat muted src="../Movie/video/john_wick.webm"></video>
         <nav>
             <div class="left">
                 <img class="logo" src="../Movie/img/logo.png" alt="Movies Logo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Series</a></li>
-                    <li><a href="#">Movies</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#" onclick="filterType('series')">Series</a></li>
+                    <li><a href="#" onclick="filterType('movie')">Movies</a></li>
                     <li><a href="#">Kids</a></li>
                 </ul>
             </div>
 
             <div class="right">
-                <input placeholder="Search..." id="search" type="text">
+                <input placeholder="Search..." id="searchInput" type="text">
                 <img class="user" src="../Movie/img/user.jpg" alt="">
-                <div class="search">
-                    <div class="search-result">
+                <div class="search" id="search">
+
+                    <!-- <a href="#" class="search-result">
                         <img src="../Movie/img/the boys.jpg" alt="">
-                        <div>
+                        <div class="cont">
                             <p class="title">The Boys</p>
                             <p class="disc">Action, 2022 <span>IMDB</span> <i class="ri-star-fill"></i> 9.3</p>
                         </div>
-                    </div>
+                    </a> -->
 
-                    
-                    <div class="search-result">
-                        <img src="../Movie/img/the boys.jpg" alt="">
-                        <div>
-                            <p class="title">The Boys Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor officia nobis, quibusdam ea in repellat recusandae perferendis voluptates perspiciatis?</p>
-                            <p class="disc">Action, 2022 <span>IMDB</span> <i class="ri-star-fill"></i> 9.3</p>
-                        </div>
-                    </div>
-
-                    <div class="search-result">
-                        <img src="../Movie/img/the boys.jpg" alt="">
-                        <div>
-                            <p class="title">The Boys Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor officia nobis, quibusdam ea in repellat recusandae perferendis voluptates perspiciatis?</p>
-                            <p class="disc">Action, 2022 <span>IMDB</span> <i class="ri-star-fill"></i> 9.3</p>
-                        </div>
-                    </div>
-
-                    <div class="search-result">
-                        <img src="../Movie/img/the boys.jpg" alt="">
-                        <div>
-                            <p class="title">The Boys Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor officia nobis, quibusdam ea in repellat recusandae perferendis voluptates perspiciatis?</p>
-                            <p class="disc">Action, 2022 <span>IMDB</span> <i class="ri-star-fill"></i> 9.3</p>
-                        </div>
-                    </div>
-
-                    <div class="search-result">
-                        <img src="../Movie/img/the boys.jpg" alt="">
-                        <div>
-                            <p class="title">The Boys Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolor officia nobis, quibusdam ea in repellat recusandae perferendis voluptates perspiciatis?</p>
-                            <p class="disc">Action, 2022 <span>IMDB</span> <i class="ri-star-fill"></i> 9.3</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </nav>
@@ -91,7 +60,7 @@
                 </div>
                 <div class="popular-movies">
                         
-                    <a href="#" class="movie-card">
+                    <!-- <a href="#" class="movie-card">
                         <img src="../Movie/img/ant man.jpg" alt="">
                         <div class="hvr">
                             <img src="../Movie/img/ant man1.jpg" alt="">
@@ -103,204 +72,8 @@
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </a> -->
 
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="#" class="movie-card">
-                        <img src="../Movie/img/ant man.jpg" alt="">
-                        <div class="hvr">
-                            <img src="../Movie/img/ant man1.jpg" alt="">
-                            <div class="cont">
-                                <h3>Ant Man 1</h3>
-                                <div class="sub">
-                                    <p>Action, 2022</p>
-                                    <p><span style="background: yellow; color: #000; padding: 1px;">IMDB</span> <i class="ri-star-s-fill"></i> 9.3</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    
                 </div>
             </div>
         </div>
